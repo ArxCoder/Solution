@@ -1,0 +1,61 @@
+﻿<Window x:Class="Solution.CompareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Solution"
+        mc:Ignorable="d"
+        Title="Сравнение дохода" Height="300" Width="800" Icon="/Resources/wallet.png" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="5">
+            <TextBlock Text="Деньги в каждый карман" FontSize="20" FontWeight="Bold" Height="30" VerticalAlignment="Center"/>
+            <Image Source="/Resources/wallet.png" Width="60"/>
+        </WrapPanel>
+
+
+        <TextBlock Text="Название" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" FontSize="14" Foreground="#FF7F7F7F"/>
+        <TextBlock Text="Доход" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="14" Foreground="#FF7F7F7F"/>
+        <TextBlock Text="Сумма к концу срока" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" FontSize="14" Foreground="#FF7F7F7F"/>
+        <TextBlock Text="Ставка" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" FontSize="14" Foreground="#FF7F7F7F"/>
+
+        <TextBlock Text="Стабильный" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Оптимальный" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Стандартный" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <TextBlock x:Name="stabIncome" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="optIncome" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="standIncome" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="stabResult" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="optResult" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="standResult" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock Text="8%" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="5%" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="6%" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button x:Name="stabContrib" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Открыть вклад" Width="130" Height="25"
+                FontWeight="Bold" Foreground="White" Background="#FF5E85FF" Click="stabContrib_Click"/>
+        <Button x:Name="optContrib" Grid.Row="3" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Открыть вклад" Width="130" Height="25"
+                FontWeight="Bold" Foreground="White" Background="#FF5E85FF" Click="optContrib_Click"/>
+        <Button x:Name="standContrib" Grid.Row="4" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Открыть вклад" Width="130" Height="25"
+                FontWeight="Bold" Foreground="White" Background="#FF5E85FF" Click="standContrib_Click"/>
+    </Grid>
+</Window>

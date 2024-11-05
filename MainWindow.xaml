@@ -1,0 +1,89 @@
+﻿<Window x:Class="Solution.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Solution"
+        mc:Ignorable="d"
+        Title="Банк" Height="450" Width="800" Icon="/Resources/wallet.png" ResizeMode="NoResize">
+    <Grid>
+        <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Top" >
+            <TextBlock Text="Деньги в каждый карман" FontSize="20" FontWeight="Bold" Height="30" VerticalAlignment="Center"/>
+            <Image Source="/Resources/wallet.png" Width="60"/>
+        </WrapPanel>
+        
+
+        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border BorderThickness="1" BorderBrush="#FF848484">
+                <Border.Effect>
+                    <DropShadowEffect Direction="150" RenderingBias="Quality" ShadowDepth="7" Color="#FFEDFAFF"/>
+                </Border.Effect>
+                <Grid Width="200" Height="250" Background="#FFE1FAFB">
+                    <TextBlock Text="Стабильный" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+                    <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50">
+                        <TextBlock Text="Без пополнения" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Без снятия" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Без капитализации" TextAlignment="Center" FontSize="16"/>
+                    </WrapPanel>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Минимальный срок от 3 месяцев" FontSize="14" Width="140"
+                        TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,0,60"/>
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10">
+                        <TextBlock Text="8%" FontSize="40" Foreground="#FF0D176F" FontWeight="Bold"/>
+                        <TextBlock Text="годовых" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,0,5" Foreground="#FF0D176F" FontWeight="Bold"/>
+                    </WrapPanel>
+                </Grid>
+            </Border>
+
+
+            <Border BorderThickness="1" BorderBrush="#FF848484" Margin="30,0,30,0">
+                <Border.Effect>
+                    <DropShadowEffect Direction="150" RenderingBias="Quality" ShadowDepth="7" Color="#FFEDFAFF"/>
+                </Border.Effect>
+                <Grid Width="200" Height="250" Background="#FFE1FAFB">
+                    <TextBlock Text="Оптимальный" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+                    <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50">
+                        <TextBlock Text="Пополняемый" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Есть возможность снятия" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="С капитализацией" TextAlignment="Center" FontSize="16"/>
+                    </WrapPanel>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Минимальный срок от 6 месяцев" FontSize="14" Width="140"
+                        TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,0,60"/>
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10">
+                        <TextBlock Text="5%" FontSize="40" Foreground="#FF0D176F" FontWeight="Bold"/>
+                        <TextBlock Text="годовых" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,0,5" Foreground="#FF0D176F" FontWeight="Bold"/>
+                    </WrapPanel>
+                </Grid>
+            </Border>
+
+            <Border BorderThickness="1" BorderBrush="#FF848484">
+                <Border.Effect>
+                    <DropShadowEffect Direction="150" RenderingBias="Quality" ShadowDepth="7" Color="#FFEDFAFF"/>
+                </Border.Effect>
+                <Grid Width="200" Height="250" Background="#FFE1FAFB">
+                    <TextBlock Text="Стандарт" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+                    <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50">
+                        <TextBlock Text="Пополняемый" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Без снятия" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Без капитализации" TextAlignment="Center" FontSize="16"/>
+                    </WrapPanel>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Минимальный срок от 3 месяцев" FontSize="14" Width="140"
+                        TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,0,60"/>
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10">
+                        <TextBlock Text="6%" FontSize="40" Foreground="#FF0D176F" FontWeight="Bold"/>
+                        <TextBlock Text="годовых" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,0,5" Foreground="#FF0D176F" FontWeight="Bold"/>
+                    </WrapPanel>
+                </Grid>
+            </Border>
+        </WrapPanel>
+
+        <Button x:Name="income" Content="Рассчитать доход" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30" Width="250" Height="30"
+                FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF627AD8" BorderBrush="#FF627AD8" Click="income_Click">
+            <Button.Effect>
+                <DropShadowEffect Direction="180" RenderingBias="Quality" ShadowDepth="4" Color="Black" Opacity="0.5"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
